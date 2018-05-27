@@ -30,7 +30,7 @@ def sub(topics, client, group, **kwargs):
         def wrapper(*args, **kwargs):
             for msg in consumer:
                 try:
-                    logger.info('Receive data from kafka for cunsumer [%s]' % client)
+                    logger.info('Receive data from kafka for consumer [%s]' % client)
                     kwargs['message'] = msg
                     func(*args, **kwargs)
                 except Exception as e:
@@ -56,7 +56,7 @@ def pub(topic, client, **kwargs):
         @functools.wraps(func)
         def wrapper(*args, **kwargs):
             try:
-                logger.info('Receive data from kafka for cunsumer [%s]' % client)
+                logger.info('Send data to kafka by producer[%s]' % client)
                 rtn = func(*args, **kwargs)
                 producer.send(topic, rtn, **kwargs)
                 return rtn
