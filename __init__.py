@@ -12,17 +12,13 @@
 import os
 from .container import register, resolve
 from .cache import cache
-from .config import Config
+from .config import Config, PROJECT_PATH, APP_PATH
 
-PROJECT_PATH = os.environ['PROJECT_PATH'] if 'PROJECT_PATH' in os.environ \
-    else os.path.split(os.path.realpath(__file__))[0] + '/../../'
-APP_PATH = os.environ['APP_PATH'] if 'APP_PATH' in os.environ \
-    else os.path.split(os.path.realpath(__file__))[0] + '/../'
 
 config = Config()
 
 
-__all__ = ['cache', 'config', 'logger', 'register', 'resolve']
+__all__ = ['cache', 'config', 'logger', 'register', 'resolve', 'PROJECT_PATH', 'APP_PATH']
 
 # if os.path.exists(os.path.join(config.PROJECT_PATH, '.env')):
 #     dotenv.read_dotenv(os.path.join(config.PROJECT_PATH, '.env'))
