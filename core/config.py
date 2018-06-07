@@ -15,9 +15,9 @@ import os
 from . import container
 
 PROJECT_PATH = os.environ['PROJECT_PATH'] if 'PROJECT_PATH' in os.environ \
-    else os.path.split(os.path.realpath(__file__))[0] + '/../../'
+    else os.path.split(os.path.realpath(__file__))[0] + '/../../../'
 APP_PATH = os.environ['APP_PATH'] if 'APP_PATH' in os.environ \
-    else os.path.split(os.path.realpath(__file__))[0] + '/../'
+    else os.path.split(os.path.realpath(__file__))[0] + '/../../'
 
 
 class Config(object):
