@@ -54,10 +54,10 @@ class Config(object):
         except Exception as e:
             container.resolve('logger').error(e)
 
-    def __getattr__(self, item):
+    def __getitem__(self, item):
         return self.get(item)
 
-    def __setattr__(self, key, value):
+    def __setitem__(self, key, value):
         self.set(key, value)
 
 
