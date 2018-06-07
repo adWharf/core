@@ -61,5 +61,6 @@ class Config(object):
         self.set(key, value)
 
 
+config = Config()
 
 

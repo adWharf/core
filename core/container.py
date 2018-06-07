@@ -12,8 +12,8 @@
 __container = {}
 
 
-def register(name, object):
-    __container[name] = object
+def register(name, obj):
+    __container[name] = obj
 
 
 def resolve(name):

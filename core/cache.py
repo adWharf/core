@@ -9,7 +9,7 @@
 @file: cache.py
 @time: 03/03/2018 23:30
 """
-from . import config
+from .config import config
 from sponge import CacheManager
 from .container import register
 

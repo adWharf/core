@@ -13,7 +13,8 @@ import sys
 import os
 import time
 from logbook import Logger, StreamHandler, FileHandler, set_datetime_format
-from . import container, config
+from . import container
+from .config import config
 import functools
 
 

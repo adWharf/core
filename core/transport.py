@@ -13,7 +13,7 @@ import json
 import functools
 from kafka import KafkaConsumer
 from kafka import KafkaProducer
-from . import config
+from .config import config
 from . import logger
 
 
