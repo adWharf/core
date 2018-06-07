@@ -10,7 +10,7 @@
 @time: 15/01/2018 10:51 AM 
 """
 
-from core.cache import cache
+from .core.cache import cache
 from .core.config import Config, PROJECT_PATH, APP_PATH
 from .core import logger
 from .core.container import register, resolve
